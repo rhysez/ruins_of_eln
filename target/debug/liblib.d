@@ -1,0 +1,1 @@
+/home/rhys/dev/rust/ruins_of_eln/target/debug/liblib.rlib: /home/rhys/dev/rust/ruins_of_eln/lib/src/char/npc.rs /home/rhys/dev/rust/ruins_of_eln/lib/src/char/pc.rs /home/rhys/dev/rust/ruins_of_eln/lib/src/char.rs /home/rhys/dev/rust/ruins_of_eln/lib/src/lib.rs

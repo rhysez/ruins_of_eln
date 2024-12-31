@@ -1,6 +1,11 @@
+// Private fields should be modified via methods or associated functions.
+// Public fields are accessible but cannot change, such as name or class.
 pub struct PlayerChar {
-    name: String,
-    level: u8,
-    hit_points: i16,
-    fatigue: i16,
+    pub name: String,
+    pub class: String,
+    pub level: u8,
+    pub hit_points: u16,
+    pub fatigue: u16,
+    pub mood: String,
+    pub mental_state: String,
 }
