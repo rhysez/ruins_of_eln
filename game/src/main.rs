@@ -1,5 +1,6 @@
 use lib::char::{self, pc::PlayerChar};
-use colored::Colorize;
+use lib::utils::messages::print_title;
+use std::io;
 
 fn main() {
     let new_pc: PlayerChar = PlayerChar {
@@ -12,9 +13,5 @@ fn main() {
         mental_state: String::from("Healthy")
     };
 
-    println!("--------------------------------------------------------");
-    println!("{}", "Ruins of Eln v0.1.0".bright_green().on_blue());
-    println!("--------------------------------------------------------");
-
-    println!("Player constructed as {}, {}, level {}", new_pc.name, new_pc.class, new_pc.level);
+    print_title();
 }
