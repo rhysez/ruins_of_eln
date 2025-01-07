@@ -8,8 +8,12 @@ pub struct PlayerChar {
     mental_state: String,
     exp: u16,
 }
+
+const MAX_LEVEL: u8 = 20;
+
 // Methods.
 impl PlayerChar {
+    // Getters.
     pub fn get_name(&self) -> &String {
         return &self.name
     }
@@ -40,6 +44,17 @@ impl PlayerChar {
 
     pub fn get_exp(&self) -> &u16 {
         return &self.exp
+    }
+
+    // Setters
+    pub fn level_up(&mut self) -> u8 {
+        if self.level == MAX_LEVEL {
+            return self.level
+        }
+
+        self.level += 1;
+
+        return self.level
     }
 }
 // Associated functions.

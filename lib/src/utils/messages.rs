@@ -1,4 +1,5 @@
 use colored::Colorize;
+use crate::char::{pc::PlayerChar};
 
 pub fn print_title() {
     println!("--------------------------------------------------------");
@@ -13,4 +14,8 @@ pub fn print_game_desc() {
     const GAME_DESC: &str = 
     "Ruins of Eln is a roguelike RPG set in a science-fantasy, underground world. Create your character and embark into the darkness of Eln, an old labyrinthine civilisation lost to space and time.";
     println!("{}", GAME_DESC)
+}
+
+pub fn announce_level_up(pc: &PlayerChar) {
+    println!("---You have reached level {}---", pc.get_level());
 }
