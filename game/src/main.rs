@@ -1,17 +1,13 @@
-use lib::char::{self, pc::PlayerChar};
-use lib::utils::messages::print_title;
-use std::io;
+use lib::char::{pc::PlayerChar, class::Class};
+use lib::utils::messages::{print_title, print_game_desc};
 
 fn main() {
-    let new_pc: PlayerChar = PlayerChar {
-        name: String::from("Rhys"),
-        class: String::from("Skulker"),
-        level: 1,
-        hit_points: 10,
-        fatigue: 10,
-        mood: String::from("Content"),
-        mental_state: String::from("Healthy")
-    };
-
+    let new_pc: PlayerChar = PlayerChar::new_char(String::from("Rhys"), String::from("Skulker"));
+    
     print_title();
+    print_game_desc();
+
+    let new_name: &String = new_pc.get_name();
+
+    println!("{}", new_name)
 }
