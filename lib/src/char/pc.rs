@@ -1,11 +1,11 @@
 pub struct PlayerChar {
-    pub name: String,
-    pub class: String,
-    pub level: u8,
-    pub hit_points: u16,
-    pub fatigue: u16,
-    pub mood: String,
-    pub mental_state: String,
+    name: String,
+    class: String,
+    level: u8,
+    hit_points: u16,
+    fatigue: u16,
+    mood: String,
+    mental_state: String,
 }
 // Methods.
 impl PlayerChar {
@@ -20,10 +20,26 @@ impl PlayerChar {
     pub fn get_level(&self) -> &u8 {
         return &self.level
     }
+
+    pub fn get_hit_points(&self) -> &u16 {
+        return &self.hit_points
+    }
+
+    pub fn get_fatigue(&self) -> &u16 {
+        return &self.fatigue
+    }
+
+    pub fn get_mood(&self) -> &String {
+        return &self.mood
+    }
+
+    pub fn get_mental_state(&self) -> &String {
+        return &self.mental_state
+    }
 }
 // Associated functions.
 impl PlayerChar {
-    pub fn new_char(name: String, class: String) -> PlayerChar {
+    pub fn new(name: String, class: String) -> PlayerChar {
         PlayerChar {
             name: name,
             class: class,

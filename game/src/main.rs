@@ -1,13 +1,12 @@
-use lib::char::{pc::PlayerChar, class::Class};
-use lib::utils::messages::{print_title, print_game_desc};
+use lib::char::{pc::PlayerChar};
+use lib::utils::messages::{*};
 
 fn main() {
-    let new_pc: PlayerChar = PlayerChar::new_char(String::from("Rhys"), String::from("Skulker"));
-    
+    let new_pc: PlayerChar = PlayerChar::new(String::from("Rhys"), String::from("Skulker"));
+
     print_title();
-    print_game_desc();
-
-    let new_name: &String = new_pc.get_name();
-
-    println!("{}", new_name)
+    
+    println!("{}", new_pc.get_name());
+    println!("{}", new_pc.get_class());
+    println!("{}", new_pc.get_level());
 }
