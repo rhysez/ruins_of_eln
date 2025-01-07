@@ -6,6 +6,7 @@ pub struct PlayerChar {
     fatigue: u16,
     mood: String,
     mental_state: String,
+    exp: u16,
 }
 // Methods.
 impl PlayerChar {
@@ -36,6 +37,10 @@ impl PlayerChar {
     pub fn get_mental_state(&self) -> &String {
         return &self.mental_state
     }
+
+    pub fn get_exp(&self) -> &u16 {
+        return &self.exp
+    }
 }
 // Associated functions.
 impl PlayerChar {
@@ -47,7 +52,8 @@ impl PlayerChar {
             hit_points: 10,
             fatigue: 10,
             mood: String::from("Content"),
-            mental_state: String::from("Healthy")
+            mental_state: String::from("Healthy"),
+            exp: 0
         }
     }
 }
