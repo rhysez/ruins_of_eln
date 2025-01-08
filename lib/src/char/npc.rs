@@ -1,9 +1,9 @@
 pub struct NonPlayerChar {
-    name: String,
-    level: u8,
-    class: String,
-    hit_points: u16,
-    fatigue: u16,
-    mood: String,
-    mental_state: String,
+    _name: String,
+    _level: u8,
+    _class: String,
+    _hit_points: u16,
+    _fatigue: u16,
+    _mood: String,
+    _mental_state: String,
 }

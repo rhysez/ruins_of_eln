@@ -1,6 +1,5 @@
 pub struct PlayerChar {
     name: String,
-    class: String,
     level: u8,
     hit_points: u16,
     fatigue: u16,
@@ -17,10 +16,6 @@ impl PlayerChar {
     // Getters.
     pub fn get_name(&self) -> &String {
         &self.name
-    }
-
-    pub fn get_class(&self) -> &String {
-        &self.class
     }
 
     pub fn get_level(&self) -> &u8 {
@@ -64,17 +59,16 @@ impl PlayerChar {
 }
 // Associated functions.
 impl PlayerChar {
-    pub fn new(name: String, class: String) -> PlayerChar {
+    pub fn new(name: String) -> PlayerChar {
         PlayerChar {
             name,
-            class,
             level: 1,
             hit_points: 10,
             fatigue: 10,
             mood: String::from("Content"),
             mental_state: String::from("Healthy"),
             exp: 0,
-            required_exp: 100
+            required_exp: 100,
         }
     }
 }

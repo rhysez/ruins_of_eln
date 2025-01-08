@@ -3,6 +3,10 @@ pub struct Class {
 }
 
 impl Class {
+    pub fn get(&self) -> &Class {
+        &self
+    }
+
     pub fn get_name(&self) -> &String {
         &self.name
     }
@@ -10,8 +14,6 @@ impl Class {
 
 impl Class {
     pub fn new(name: String) -> Class {
-        Class {
-            name
-        }
+        Class { name }
     }
 }
