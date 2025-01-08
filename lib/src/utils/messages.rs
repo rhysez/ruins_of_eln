@@ -1,5 +1,5 @@
+use crate::char::pc::PlayerChar;
 use colored::Colorize;
-use crate::char::{pc::PlayerChar};
 
 pub fn print_title() {
     println!("--------------------------------------------------------");
@@ -11,8 +11,7 @@ pub fn print_title() {
 }
 
 pub fn print_game_desc() {
-    const GAME_DESC: &str = 
-    "Ruins of Eln is a roguelike RPG set in a science-fantasy, underground world. Create your character and embark into the darkness of Eln, an old labyrinthine civilisation lost to space and time.";
+    const GAME_DESC: &str = "Ruins of Eln is a roguelike RPG set in a science-fantasy, underground world. Create your character and embark into the darkness of Eln, an old labyrinthine civilisation lost to space and time.";
     println!("{}", GAME_DESC)
 }
 

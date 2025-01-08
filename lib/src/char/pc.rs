@@ -7,6 +7,7 @@ pub struct PlayerChar {
     mood: String,
     mental_state: String,
     exp: u16,
+    required_exp: u32,
 }
 
 const MAX_LEVEL: u8 = 20;
@@ -15,60 +16,65 @@ const MAX_LEVEL: u8 = 20;
 impl PlayerChar {
     // Getters.
     pub fn get_name(&self) -> &String {
-        return &self.name
+        &self.name
     }
 
     pub fn get_class(&self) -> &String {
-        return &self.class
+        &self.class
     }
 
     pub fn get_level(&self) -> &u8 {
-        return &self.level
+        &self.level
     }
 
     pub fn get_hit_points(&self) -> &u16 {
-        return &self.hit_points
+        &self.hit_points
     }
 
     pub fn get_fatigue(&self) -> &u16 {
-        return &self.fatigue
+        &self.fatigue
     }
 
     pub fn get_mood(&self) -> &String {
-        return &self.mood
+        &self.mood
     }
 
     pub fn get_mental_state(&self) -> &String {
-        return &self.mental_state
+        &self.mental_state
     }
 
     pub fn get_exp(&self) -> &u16 {
-        return &self.exp
+        &self.exp
+    }
+
+    pub fn get_required_exp(&self) -> &u32 {
+        &self.required_exp
     }
 
     // Setters
     pub fn level_up(&mut self) -> u8 {
         if self.level == MAX_LEVEL {
-            return self.level
+            return self.level;
         }
 
         self.level += 1;
 
-        return self.level
+        self.level
     }
 }
 // Associated functions.
 impl PlayerChar {
     pub fn new(name: String, class: String) -> PlayerChar {
         PlayerChar {
-            name: name,
-            class: class,
+            name,
+            class,
             level: 1,
             hit_points: 10,
             fatigue: 10,
             mood: String::from("Content"),
             mental_state: String::from("Healthy"),
-            exp: 0
+            exp: 0,
+            required_exp: 100
         }
     }
 }

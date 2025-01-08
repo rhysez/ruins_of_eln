@@ -1,4 +1,17 @@
 pub struct Class {
-    pub name: String,
-    // Add further fields, such as abilities or attributes.
+    name: String,
+}
+
+impl Class {
+    pub fn get_name(&self) -> &String {
+        &self.name
+    }
+}
+
+impl Class {
+    pub fn new(name: String) -> Class {
+        Class {
+            name
+        }
+    }
 }
